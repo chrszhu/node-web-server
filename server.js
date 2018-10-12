@@ -5,15 +5,18 @@ var app = express();
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-  res.send({
-    errorMessage: 'unable to handle request',
-    hello: ['wtf', 'wtfs']
-
-  })
+  res.render('home.hbs', {
+    pageTitle: 'Home Page',
+    currentYear: new Date().getFullYear(),
+    homeMessage: 'sup dog'
+  });
 });
 
 app.get('/about', (req, res) => {
-  res.send('About page');
+  res.render('about.hbs', {
+    pageTitle: 'About Page',
+    currentYear: new Date().getFullYear()
+  });
 });
 
 
