@@ -1,4 +1,4 @@
-const express = re  quire('express');
+const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
